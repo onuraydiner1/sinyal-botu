@@ -1,0 +1,83 @@
+BTCUSDT: Sinyal yok.
+ETHUSDT: Sinyal yok.
+SOLUSDT: Sinyal yok.
+BNBUSDT: Sinyal yok.
+XRPUSDT: Sinyal yok.
+Traceback (most recent call last):
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/ssl.py", line 501, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/ssl.py", line 1041, in _create
+    self.do_handshake()
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/ssl.py", line 1310, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/ssl.py", line 501, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/ssl.py", line 1041, in _create
+    self.do_handshake()
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/ssl.py", line 1310, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/onuraydiner/PyCharmMiscProject/bot.py", line 156, in <module>
+    run_bot()
+  File "/Users/onuraydiner/PyCharmMiscProject/bot.py", line 141, in run_bot
+    df = get_data(symbol)
+  File "/Users/onuraydiner/PyCharmMiscProject/bot.py", line 48, in get_data
+    candles = client.get_klines(symbol=symbol, interval=interval, limit=100)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/binance/client.py", line 919, in get_klines
+    return self._get('klines', data=params, version=self.PRIVATE_API_VERSION)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/binance/client.py", line 415, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/binance/client.py", line 378, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/binance/client.py", line 358, in _request
+    self.response = getattr(self.session, method)(uri, **kwargs)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/requests/sessions.py", line 600, in get
+    return self.request("GET", url, **kwargs)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/onuraydiner/opt/anaconda3/lib/python3.9/site-packages/requests/adapters.py", line 547, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
